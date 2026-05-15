@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    <dimen name="edge_margin">20dp</dimen>
+    <dimen name="stack_gutter">12dp</dimen>
+
+    <!-- FAB / Button Sizes -->
+    <dimen name="fab_size_large">84dp</dimen>
+    <dimen name="fab_size_sos">96dp</dimen>
+    <dimen name="fab_size_medium">72dp</dimen>
+    <dimen name="fab_size_small">64dp</dimen>
+    <dimen name="map_control_size">48dp</dimen>
+    <dimen name="fab_border_width">4dp</dimen>
+    <dimen name="sos_border_width">6dp</dimen>
+
+    <!-- Search Bar -->
+    <dimen name="search_bar_height">56dp</dimen>
+    <dimen name="input_height">48dp</dimen>
+    <dimen name="search_bar_radius">28dp</dimen>
+    <dimen name="input_radius">12dp</dimen>
+
+    <!-- Nav Bar -->
+    <dimen name="nav_bar_height">64dp</dimen>
+    <dimen name="nav_bar_radius">32dp</dimen>
+
+    <!-- Profile Image -->
+    <dimen name="profile_image_small">40dp</dimen>
+    <dimen name="profile_image_medium">56dp</dimen>
+    <dimen name="profile_image_large">100dp</dimen>
+    <dimen name="profile_border_width">3dp</dimen>
+
+    <!-- Card -->
+    <dimen name="card_radius">24dp</dimen>
+    <dimen name="card_padding">12dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+
+    <!-- Typography -->
+    <dimen name="text_display">32sp</dimen>
+    <dimen name="text_h1">24sp</dimen>
+    <dimen name="text_h2">20sp</dimen>
+    <dimen name="text_h3">18sp</dimen>
+    <dimen name="text_body_lg">18sp</dimen>
+    <dimen name="text_body_md">16sp</dimen>
+    <dimen name="text_body_sm">14sp</dimen>
+    <dimen name="text_label_caps">12sp</dimen>
+    <dimen name="text_sos">22sp</dimen>
+
+    <!-- Bottom Navigation -->
+    <dimen name="bottom_nav_height">64dp</dimen>
+
+    <!-- Icon Sizes -->
+    <dimen name="icon_size_sm">16dp</dimen>
+    <dimen name="icon_size_md">24dp</dimen>
+    <dimen name="icon_size_lg">28dp</dimen>
+    <dimen name="icon_size_xl">32dp</dimen>
+    <dimen name="icon_size_sos">40dp</dimen>
+</resources>

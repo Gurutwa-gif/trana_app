@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RouteSelectionFragment">
+
+    <!-- Map Background (OpenStreetMap) -->
+    <org.osmdroid.views.MapView
+        android:id="@+id/map_route_selection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Bottom Sheet - Route Options -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_bottom_sheet"
+        android:elevation="16dp"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_lg">
+
+        <!-- Handle Bar -->
+        <View
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/spacing_md"
+            android:background="@drawable/bg_handle_bar" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_md"
+            android:text="@string/alternate_routes_label"
+            android:textColor="@color/on_surface"
+            android:textSize="@dimen/text_h1"
+            android:textStyle="bold" />
+
+        <!-- Route Option 1 - Safest -->
+        <LinearLayout
+            android:id="@+id/route_option_safest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_sm"
+            android:background="@drawable/bg_route_option_selected"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_md">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/safest_route"
+                    android:textColor="@color/on_primary"
+                    android:textSize="@dimen/text_body_md"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="15 min • 2.1 mi"
+                    android:textColor="@color/on_primary"
+                    android:textSize="@dimen/text_body_sm" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="95%"
+                    android:textColor="@color/on_primary"
+                    android:textSize="@dimen/text_h2"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Safe"
+                    android:textColor="@color/on_primary"
+                    android:textSize="@dimen/text_label_caps"
+                    android:textAllCaps="true" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Route Option 2 - Fastest -->
+        <LinearLayout
+            android:id="@+id/route_option_fastest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_sm"
+            android:background="@drawable/bg_route_option"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_md">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fastest_route"
+                    android:textColor="@color/on_surface"
+                    android:textSize="@dimen/text_body_md"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="10 min • 1.8 mi"
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="@dimen/text_body_sm" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="72%"
+                    android:textColor="@color/tertiary"
+                    android:textSize="@dimen/text_h2"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Safe"
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="@dimen/text_label_caps"
+                    android:textAllCaps="true" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Route Option 3 - Alternative -->
+        <LinearLayout
+            android:id="@+id/route_option_alt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_lg"
+            android:background="@drawable/bg_route_option"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_md">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Via Market Street"
+                    android:textColor="@color/on_surface"
+                    android:textSize="@dimen/text_body_md"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="18 min • 2.5 mi"
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="@dimen/text_body_sm" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="88%"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/text_h2"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Safe"
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="@dimen/text_label_caps"
+                    android:textAllCaps="true" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Start Navigation Button -->
+        <TextView
+            android:id="@+id/btn_start_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_button_primary"
+            android:gravity="center"
+            android:text="@string/start_navigation"
+            android:textColor="@color/on_primary"
+            android:textSize="@dimen/text_body_md"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</FrameLayout>

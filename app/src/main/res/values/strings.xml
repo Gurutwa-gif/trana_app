@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Trana</string>
+
+    <!-- Home Screen -->
+    <string name="search_hint">Enter Location</string>
+    <string name="profile_desc">User Profile</string>
+    <string name="sos_text">SOS</string>
+    <string name="call_desc">Emergency Call</string>
+    <string name="safety_marker_desc">Safe Haven</string>
+
+    <!-- Navigation Screen -->
+    <string name="current_location">Current Location</string>
+    <string name="destination_hint">Destination</string>
+    <string name="my_location_desc">My Location</string>
+
+    <!-- Route Map Screen -->
+    <string name="alternate_routes">Alternate\nroutes</string>
+    <string name="alternate_routes_label">Alternate Routes</string>
+    <string name="zoom_in_desc">Zoom In</string>
+    <string name="zoom_out_desc">Zoom Out</string>
+    <string name="layers_desc">Map Layers</string>
+    <string name="destination_name">Golden Gate Park</string>
+    <string name="distance_text">2.1 mi</string>
+    <string name="sos_desc">Emergency SOS</string>
+
+    <!-- Route Selection Screen -->
+    <string name="select_route">Select Route</string>
+    <string name="safest_route">Safest Route</string>
+    <string name="fastest_route">Fastest Route</string>
+    <string name="route_safety_score">Safety Score</string>
+    <string name="route_time">Est. Time</string>
+    <string name="route_distance">Distance</string>
+    <string name="start_navigation">Start Navigation</string>
+
+    <!-- Profile Screen -->
+    <string name="profile_name">Jane Doe</string>
+    <string name="joined_date">Joined on: 12/03/2024</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="phone_label">Phone Number</string>
+    <string name="phone_value">+1 234 567 890</string>
+    <string name="email_label">Email</string>
+    <string name="email_value">jane.doe@example.com</string>
+    <string name="gender_label">Gender</string>
+    <string name="gender_value">Female</string>
+    <string name="address_label">Home Address</string>
+    <string name="address_value">123 Maple St, San Francisco</string>
+    <string name="preferences">Preferences</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="notifications">Notifications</string>
+    <string name="emergency_contacts">Emergency Contacts</string>
+    <string name="log_out">Log Out</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_navigate">Navigate</string>
+    <string name="nav_map">Map</string>
+    <string name="nav_profile">Profile</string>
+</resources>

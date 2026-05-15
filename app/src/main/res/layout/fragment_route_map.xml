@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RouteMapFragment">
+
+    <!-- Map Background (OpenStreetMap) -->
+    <org.osmdroid.views.MapView
+        android:id="@+id/map_route"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Top Navigation Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_bar_height"
+        android:layout_marginTop="@dimen/spacing_sm"
+        android:layout_marginStart="@dimen/edge_margin"
+        android:layout_marginEnd="@dimen/edge_margin"
+        android:background="@drawable/bg_nav_bar"
+        android:elevation="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/spacing_md"
+        android:paddingEnd="@dimen/spacing_sm">
+
+        <!-- Destination Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_destination_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/destination_name"
+                android:textColor="@color/on_surface"
+                android:textSize="@dimen/text_h3"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Distance Badge -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginEnd="@dimen/spacing_md">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="@string/distance_text"
+                android:src="@android:drawable/ic_menu_directions"
+                app:tint="@color/primary" />
+
+            <TextView
+                android:id="@+id/tv_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/distance_text"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/text_body_md"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Profile Picture -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile_route"
+            android:layout_width="@dimen/profile_image_small"
+            android:layout_height="@dimen/profile_image_small"
+            android:src="@android:drawable/ic_menu_myplaces"
+            app:civ_border_color="@color/outline_variant_50"
+            app:civ_border_width="1dp" />
+    </LinearLayout>
+
+    <!-- Right Side Action Buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="@dimen/edge_margin"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Call Button -->
+        <FrameLayout
+            android:id="@+id/btn_call_route"
+            android:layout_width="@dimen/fab_size_small"
+            android:layout_height="@dimen/fab_size_small"
+            android:layout_marginBottom="@dimen/spacing_md"
+            android:background="@drawable/bg_side_button"
+            android:elevation="8dp"
+            android:foreground="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:layout_width="@dimen/icon_size_lg"
+                android:layout_height="@dimen/icon_size_lg"
+                android:layout_gravity="center"
+                android:contentDescription="@string/call_desc"
+                android:src="@android:drawable/ic_menu_call"
+                app:tint="@color/on_surface_variant" />
+        </FrameLayout>
+
+        <!-- Alternate Routes Button -->
+        <FrameLayout
+            android:id="@+id/btn_alternate_routes"
+            android:layout_width="@dimen/fab_size_medium"
+            android:layout_height="@dimen/fab_size_medium"
+            android:background="@drawable/bg_call_button"
+            android:elevation="8dp"
+            android:foreground="?attr/selectableItemBackgroundBorderless">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="@string/alternate_routes_label"
+                    android:src="@android:drawable/ic_menu_directions"
+                    app:tint="@color/on_primary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/alternate_routes"
+                    android:textColor="@color/on_primary"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Bottom SOS + Map Controls -->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="96dp">
+
+        <!-- SOS Button (Center) -->
+        <FrameLayout
+            android:id="@+id/btn_sos_route"
+            android:layout_width="@dimen/fab_size_sos"
+            android:layout_height="@dimen/fab_size_sos"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_sos_button"
+            android:elevation="16dp"
+            android:foreground="?attr/selectableItemBackgroundBorderless">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_size_sos"
+                    android:layout_height="@dimen/icon_size_sos"
+                    android:contentDescription="@string/sos_desc"
+                    android:src="@android:drawable/ic_dialog_alert"
+                    app:tint="@color/on_error" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sos_text"
+                    android:textColor="@color/on_error"
+                    android:textSize="@dimen/text_label_caps"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- SOS Border -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_sos_border" />
+        </FrameLayout>
+
+        <!-- Zoom Out (Left) -->
+        <FrameLayout
+            android:id="@+id/btn_zoom_out"
+            android:layout_width="@dimen/map_control_size"
+            android:layout_height="@dimen/map_control_size"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="-72dp"
+            android:background="@drawable/bg_map_control"
+            android:elevation="8dp"
+            android:foreground="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:layout_width="@dimen/icon_size_md"
+                android:layout_height="@dimen/icon_size_md"
+                android:layout_gravity="center"
+                android:contentDescription="@string/zoom_out_desc"
+                android:src="@android:drawable/btn_minus"
+                app:tint="@color/primary" />
+        </FrameLayout>
+
+        <!-- Zoom In (Right) -->
+        <FrameLayout
+            android:id="@+id/btn_zoom_in"
+            android:layout_width="@dimen/map_control_size"
+            android:layout_height="@dimen/map_control_size"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="-72dp"
+            android:background="@drawable/bg_map_control"
+            android:elevation="8dp"
+            android:foreground="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:layout_width="@dimen/icon_size_md"
+                android:layout_height="@dimen/icon_size_md"
+                android:layout_gravity="center"
+                android:contentDescription="@string/zoom_in_desc"
+                android:src="@android:drawable/btn_plus"
+                app:tint="@color/primary" />
+        </FrameLayout>
+
+        <!-- My Location (Top-Left) -->
+        <FrameLayout
+            android:id="@+id/btn_my_location"
+            android:layout_width="@dimen/map_control_size"
+            android:layout_height="@dimen/map_control_size"
+            android:layout_gravity="start|top"
+            android:layout_marginStart="-48dp"
+            android:layout_marginTop="-48dp"
+            android:background="@drawable/bg_map_control"
+            android:elevation="8dp"
+            android:foreground="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:layout_width="@dimen/icon_size_md"
+                android:layout_height="@dimen/icon_size_md"
+                android:layout_gravity="center"
+                android:contentDescription="@string/my_location_desc"
+                android:src="@android:drawable/ic_menu_mylocation"
+                app:tint="@color/primary" />
+        </FrameLayout>
+
+        <!-- Layers (Top-Right) -->
+        <FrameLayout
+            android:id="@+id/btn_layers"
+            android:layout_width="@dimen/map_control_size"
+            android:layout_height="@dimen/map_control_size"
+            android:layout_gravity="end|top"
+            android:layout_marginEnd="-48dp"
+            android:layout_marginTop="-48dp"
+            android:background="@drawable/bg_map_control"
+            android:elevation="8dp"
+            android:foreground="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:layout_width="@dimen/icon_size_md"
+                android:layout_height="@dimen/icon_size_md"
+                android:layout_gravity="center"
+                android:contentDescription="@string/layers_desc"
+                android:src="@android:drawable/ic_menu_sort_by_size"
+                app:tint="@color/primary" />
+        </FrameLayout>
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NavigationFragment">
+
+    <!-- Map Background (OpenStreetMap) -->
+    <org.osmdroid.views.MapView
+        android:id="@+id/map_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Top Search Card -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="@dimen/edge_margin"
+        android:layout_marginEnd="@dimen/edge_margin">
+
+        <!-- Search Card Background -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_rounded"
+            android:elevation="8dp"
+            android:orientation="vertical"
+            android:padding="@dimen/card_padding">
+
+            <!-- Current Location Input -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:background="@drawable/bg_input_field">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_size_md"
+                    android:layout_height="@dimen/icon_size_md"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_marginStart="16dp"
+                    android:contentDescription="@string/my_location_desc"
+                    android:src="@android:drawable/ic_menu_mylocation"
+                    app:tint="@color/primary" />
+
+                <EditText
+                    android:id="@+id/et_current_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:focusable="false"
+                    android:paddingStart="48dp"
+                    android:paddingEnd="16dp"
+                    android:text="@string/current_location"
+                    android:textColor="@color/on_surface"
+                    android:textSize="@dimen/text_body_md" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_sm" />
+
+            <!-- Destination Input -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height"
+                android:background="@drawable/bg_input_field_bordered">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_size_md"
+                    android:layout_height="@dimen/icon_size_md"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_marginStart="16dp"
+                    android:contentDescription="@string/destination_hint"
+                    android:src="@android:drawable/ic_menu_mapmode"
+                    app:tint="@color/error" />
+
+                <EditText
+                    android:id="@+id/et_destination"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/destination_hint"
+                    android:inputType="text"
+                    android:paddingStart="48dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@color/on_surface"
+                    android:textColorHint="@color/on_surface_variant_60"
+                    android:textSize="@dimen/text_body_md" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- Profile Button (overlapping top-right) -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile_nav"
+            android:layout_width="@dimen/profile_image_medium"
+            android:layout_height="@dimen/profile_image_medium"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="-12dp"
+            android:layout_marginEnd="-12dp"
+            android:elevation="16dp"
+            android:src="@android:drawable/ic_menu_myplaces"
+            app:civ_border_color="@color/surface"
+            app:civ_border_width="@dimen/profile_border_width" />
+    </FrameLayout>
+
+    <!-- Bottom Floating Buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="96dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- Call Button -->
+        <FrameLayout
+            android:id="@+id/btn_call_nav"
+            android:layout_width="@dimen/fab_size_large"
+            android:layout_height="@dimen/fab_size_large"
+            android:layout_marginEnd="@dimen/spacing_lg"
+            android:background="@drawable/bg_call_button"
+            android:elevation="12dp"
+            android:foreground="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:layout_width="@dimen/icon_size_xl"
+                android:layout_height="@dimen/icon_size_xl"
+                android:layout_gravity="center"
+                android:contentDescription="@string/call_desc"
+                android:src="@android:drawable/ic_menu_call"
+                app:tint="@color/on_primary" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_fab_border" />
+        </FrameLayout>
+
+        <!-- SOS Button -->
+        <FrameLayout
+            android:id="@+id/btn_sos_nav"
+            android:layout_width="@dimen/fab_size_large"
+            android:layout_height="@dimen/fab_size_large"
+            android:background="@drawable/bg_sos_flat"
+            android:elevation="12dp"
+            android:foreground="?attr/selectableItemBackgroundBorderless">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/sos_text"
+                android:textColor="@color/on_error"
+                android:textSize="@dimen/text_sos"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_fab_border" />
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>

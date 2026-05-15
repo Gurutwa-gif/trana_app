@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primary">#FF004AC6</color>
+    <color name="primary_variant">#FF2563EB</color>
+    <color name="primary_container">#FF2563EB</color>
+    <color name="primary_fixed">#FFDBE1FF</color>
+    <color name="primary_fixed_dim">#FFB4C5FF</color>
+    <color name="on_primary">#FFFFFFFF</color>
+    <color name="on_primary_container">#FFEEEFFF</color>
+    <color name="on_primary_fixed">#FF00174B</color>
+    <color name="on_primary_fixed_variant">#FF003EA8</color>
+    <color name="inverse_primary">#FFB4C5FF</color>
+
+    <!-- Secondary Colors -->
+    <color name="secondary">#FF006B5F</color>
+    <color name="secondary_container">#FF6DF5E1</color>
+    <color name="secondary_fixed">#FF71F8E4</color>
+    <color name="secondary_fixed_dim">#FF4FDBC8</color>
+    <color name="on_secondary">#FFFFFFFF</color>
+    <color name="on_secondary_container">#FF006F64</color>
+    <color name="on_secondary_fixed">#FF00201C</color>
+    <color name="on_secondary_fixed_variant">#FF005048</color>
+
+    <!-- Tertiary Colors -->
+    <color name="tertiary">#FF943700</color>
+    <color name="tertiary_container">#FFBC4800</color>
+    <color name="tertiary_fixed">#FFFFDBCD</color>
+    <color name="tertiary_fixed_dim">#FFFFB596</color>
+    <color name="on_tertiary">#FFFFFFFF</color>
+    <color name="on_tertiary_container">#FFFFEDE6</color>
+    <color name="on_tertiary_fixed">#FF360F00</color>
+    <color name="on_tertiary_fixed_variant">#FF7D2D00</color>
+
+    <!-- Error Colors -->
+    <color name="error">#FFBA1A1A</color>
+    <color name="error_container">#FFFFDAD6</color>
+    <color name="on_error">#FFFFFFFF</color>
+    <color name="on_error_container">#FF93000A</color>
+    <color name="error_gradient_start">#FFFF8A80</color>
+    <color name="error_gradient_end">#FFBA1A1A</color>
+
+    <!-- Surface Colors -->
+    <color name="surface">#FFFAF8FF</color>
+    <color name="surface_dim">#FFD9D9E5</color>
+    <color name="surface_bright">#FFFAF8FF</color>
+    <color name="surface_container_lowest">#FFFFFFFF</color>
+    <color name="surface_container_low">#FFF3F3FE</color>
+    <color name="surface_container">#FFEDEDF9</color>
+    <color name="surface_container_high">#FFE7E7F3</color>
+    <color name="surface_container_highest">#FFE1E2ED</color>
+    <color name="surface_variant">#FFE1E2ED</color>
+    <color name="surface_tint">#FF0053DB</color>
+    <color name="on_surface">#FF191B23</color>
+    <color name="on_surface_variant">#FF434655</color>
+    <color name="inverse_surface">#FF2E3039</color>
+    <color name="inverse_on_surface">#FFF0F0FB</color>
+
+    <!-- Background -->
+    <color name="background">#FFFAF8FF</color>
+    <color name="on_background">#FF191B23</color>
+
+    <!-- Outline -->
+    <color name="outline">#FF737686</color>
+    <color name="outline_variant">#FFC3C6D7</color>
+
+    <!-- Utility Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="white_40">#66FFFFFF</color>
+    <color name="white_50">#80FFFFFF</color>
+    <color name="white_80">#CCFFFFFF</color>
+    <color name="surface_80">#CCFAF8FF</color>
+    <color name="surface_95">#F2FAF8FF</color>
+    <color name="primary_shadow">#80004AC6</color>
+    <color name="error_shadow">#80BA1A1A</color>
+    <color name="call_shadow">#66004AC6</color>
+    <color name="outline_variant_30">#4DC3C6D7</color>
+    <color name="outline_variant_40">#66C3C6D7</color>
+    <color name="outline_variant_50">#80C3C6D7</color>
+    <color name="on_surface_variant_60">#99434655</color>
+
+    <!-- Safety Zone Colors -->
+    <color name="danger_zone">#99BA1A1A</color>
+    <color name="moderate_zone">#66BC4800</color>
+    <color name="safe_route">#FFB4C5FF</color>
+    <color name="safe_route_glow">#FF004AC6</color>
+</resources>
